@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { initialiseApp } from "firebase/app";
+import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDDyMHnh4QVCokdGPihDK59EOfx5YGOChg",
@@ -16,13 +16,13 @@ const firebaseConfig = {
   measurementId: "G-1HDNCM3MDX"
 };
 
-initialiseApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>
+  </BrowserRouter>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
